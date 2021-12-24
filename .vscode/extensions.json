@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "mikestead.dotenv",
+      "ue.alphabetical-sorter",
+      "vscode-icons-team.vscode-icons"
+    ],
+    "unwantedRecommendations": [
+      "esbenp.prettier-vscode"
+    ]
+  }

@@ -1,0 +1,33 @@
+{
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.parameterHints.enabled": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true,
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true,
+    },
+    {
+      "language": "typescript",
+      "autoFix": true,
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true,
+    },
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  }
+}
