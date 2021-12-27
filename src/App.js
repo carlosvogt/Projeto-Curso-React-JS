@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const BemVindo = ({ nome }) => {
   return (
@@ -40,6 +40,24 @@ const Social = ({ facebook, linkedin, youtube }) => {
 
 function App() {
   const [contador, setContador] = useState(0);
+  const date = new Date();
+  const [dateTime, setDateTime] = useState({
+    hours: date.getHours(),
+    minutes: date.getMinutes(),
+    seconds: date.getSeconds(),
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDateTime({
+        hours: date.getHours(),
+        minutes: date.getMinutes(),
+        seconds: date.getSeconds(),
+      });
+    }, 1000);
+    return () => clearInterval(timer);
+  });
+
   function somar() {
     setContador(contador + 1);
   }
@@ -74,6 +92,10 @@ function App() {
           -
         </button>
       </h3>
+      <hr />
+      <h1>
+        Agora são: {dateTime.hours}:{dateTime.minutes}:{dateTime.seconds}{' '}
+      </h1>
     </div>
   );
 }
