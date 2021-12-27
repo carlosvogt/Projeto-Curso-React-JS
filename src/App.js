@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Membro from './components/Membro/index.js';
 
 const BemVindo = ({ nome }) => {
   return (
@@ -68,6 +69,11 @@ function App() {
 
   return (
     <div>
+      <h3>
+        A seguir são apresentados alguns exercicios realizados durante o curso
+      </h3>
+      <hr />
+      <div />
       Olá mundo!
       <BemVindo nome="Carlos" />
       <hr />
@@ -96,6 +102,9 @@ function App() {
       <h1>
         Agora são: {dateTime.hours}:{dateTime.minutes}:{dateTime.seconds}{' '}
       </h1>
+      <hr />
+      <Membro nome="Visitante" />
+      <hr />
     </div>
   );
 }
